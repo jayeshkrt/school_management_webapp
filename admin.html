@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container h1 {
+            margin-bottom: 20px;
+        }
+        .container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .container ul li {
+            margin: 20px 0;
+        }
+        .container ul li a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container ul li a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .container a.home-link {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        .container a.home-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" style="color: white; text-decoration: none;"><h1>School Management System</h1></a>
+    </div>
+    <div class="container">
+        <h1>Hello Admin</h1>
+        <ul>
+            <li><a href="modify_students.html">Modify Student Data</a></li>
+            <li><a href="modify_teachers.html">Modify Teacher Data</a></li>
+            <li><a href="modify_subjects.html">Modify Subject Data</a></li>
+            <li><a href="modify_grades.html">Modify Grades Data</a></li>
+        </ul>
+    </div>
+</body>
+</html>
