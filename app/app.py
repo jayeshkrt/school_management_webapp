@@ -2,17 +2,22 @@ from flask import Flask, request, jsonify
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS
 
 # MySQL configurations
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'yourusername'
-app.config['MYSQL_PASSWORD'] = 'yourpassword'
-app.config['MYSQL_DB'] = 'school_management_system'
+app.config['MYSQL_HOST'] = os.getenv('MYSQL_HOST', 'localhost')
+app.config['MYSQL_USER'] = os.getenv('MYSQL_USER', 'yourusername')
+app.config['MYSQL_PASSWORD'] = os.getenv('MYSQL_PASSWORD', 'yourpassword')
+app.config['MYSQL_DB'] = os.getenv('MYSQL_DB', 'school_management_system')
 
 mysql = MySQL(app)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
 
 # CRUD operations for students
 @app.route('/students', methods=['GET', 'POST', 'PUT', 'DELETE'])
